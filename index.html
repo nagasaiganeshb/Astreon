@@ -421,7 +421,10 @@ footer{background:var(--s900);padding:4rem clamp(1rem,5vw,3rem) 2rem;border-top:
 .fnv a{font-size:.855rem;color:rgba(255,255,255,.42);transition:color .2s}
 .fnv a:hover{color:var(--sky2)}
 .fbot{max-width:var(--mx);margin:2rem auto 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
-.map-small{margin-top:1rem;border-radius:4px;overflow:hidden;border:1px solid rgba(255,255,255,.1);width:100%;height:120px}
+.map-small{margin-top:1rem;border-radius:4px;overflow:hidden;border:1px solid rgba(255,255,255,.1);width:100%;height:120px;position:relative;background:#f0f0f0}
+.map-small::before{content:'Loading map...';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#666;font-size:.8rem;z-index:1}
+.map-small.loaded{background:transparent}
+.map-small.loaded::before{display:none}
 .map-small iframe{width:100%;height:100%;display:block;}
 .fcp{font-size:.75rem;color:rgba(255,255,255,.2)}
 .fbl{display:flex;gap:1.5rem}
@@ -1130,7 +1133,7 @@ footer{background:var(--s900);padding:4rem clamp(1rem,5vw,3rem) 2rem;border-top:
     </div>
     <div><div class="fct">Services</div><ul class="fnv"><li><a href="#sv">Cloud Services</a></li><li><a href="#sv">Data Analytics</a></li><li><a href="#sv">AI & Automation</a></li><li><a href="#sv">Cybersecurity</a></li><li><a href="#sv">Web Development </a></li><li><a href="#sv">Data Engineering</a></li></ul></div>
     <div><div class="fct">Company</div><ul class="fnv"><li><a href="#ab">About Us</a></li><li><a href="#wy">Why Astreon</a></li><li><a href="#dm">Industries</a></li><li><a href="#te">Testimonials</a></li><li><a href="#tc">Technologies</a></li><li><a href="#ct">Contact Us</a></li></ul></div>
-    <div><div class="fct">Contact</div><ul class="fnv"><li><a href="mailto:hello@astreonllc.com">hello@astreonllc.com</a></li><li><a href="#mp">2420 Rio Grande Dr, Trancy CA 95377</a></li></ul><div class="map-small"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.9708397542445!2d-121.46291432431099!3d37.69688387200514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809023477312f84f%3A0xb9cc3e616347d09c!2s2420%20Rio%20Grande%20Dr%2C%20Tracy%2C%20CA%2095377%2C%20USA!5e0!3m2!1sen!2sin!4v1774798076580!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Astreon LLC Location"></iframe></div></div>
+    <div><div class="fct">Contact</div><ul class="fnv"><li><a href="mailto:hello@astreonllc.com">hello@astreonllc.com</a></li><li><a href="#mp">2420 Rio Grande Dr, Trancy CA 95377</a></li></ul><div class="map-small"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12627.681559008488!2d-121.4629143!3d37.6968839!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809023477312f84f%3A0xb9cc3e616347d09c!2s2420%20Rio%20Grande%20Dr%2C%20Tracy%2C%20CA%2095377%2C%20USA!5e0!3m2!1sen!2sus!4v1703123456789!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Astreon LLC Location" onload="this.parentElement.classList.add('loaded')"></iframe></div></div>
   </div>
   <div class="fbot"><span class="fcp">© 2025 Astreon LLC. All Rights Reserved.</span><div class="fbl"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div></div>
 </footer>
