@@ -458,7 +458,7 @@ footer{background:var(--s900);padding:3rem clamp(1rem,5vw,3rem) 2rem;border-top:
   :root{--nav:60px}
   .nl{display:none}.hbg{display:flex}
   .hh{font-size:clamp(2.5rem,9vw,3.2rem)}
-  .hh .ou{color:#F8FAFC;-webkit-text-stroke:0.8px rgba(255,255,255,.3)}
+  .hh .ou{color:#F8FAFC}
   .hpanel{grid-template-columns:1fr 1fr}
   .hbtns{flex-direction:column;gap:.7rem}
   .hbtns a{text-align:center;width:100%;justify-content:center}
@@ -1153,7 +1153,7 @@ const hbg=document.getElementById('hbg'),drw=document.getElementById('drw');
 hbg.addEventListener('click',()=>{const o=drw.classList.toggle('o');hbg.classList.toggle('o',o);document.body.style.overflow=o?'hidden':''});
 function cd(){drw.classList.remove('o');hbg.classList.remove('o');document.body.style.overflow=''}
 
-const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{threshold:0.08});
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{threshold:0.01});
 document.querySelectorAll('.r').forEach(el=>ro.observe(el));
 
 function cu(el,n){const dur=1800,s=performance.now();(function t(now){const p=Math.min((now-s)/dur,1),e=1-Math.pow(1-p,3);el.textContent=Math.floor(e*n);if(p<1)requestAnimationFrame(t)})(s)}
